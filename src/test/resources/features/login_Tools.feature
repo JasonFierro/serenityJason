@@ -14,7 +14,7 @@ Feature: Realizar el login en la pagina ToolsQA
     Then Validar que ingreso a la pagina principal "<textoEsperadoUser>"
     Examples:
       | usuario | contrasena | actor | recorder      | textoEsperadoUser |
-      | Prueba1 | Prueba1*   | Jason | login_exitoso | Books :.          |
+      | Prueba1 | Prueba1*   | Clau | login_exitoso | Books :.          |
 #      | Prueba  | prueba1    | Andres |
 #      |         |            | Jorge  |
 #      |         | prueba1    | Lorem  |
