@@ -148,10 +148,13 @@
             <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
         </li>
         <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 10-10-2022 15:13</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 18-10-2022 16:54</span>
     <br style="clear:left"/>
 </div>
 
@@ -186,9 +189,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Se debe ingresar a la pagina ToolsQA y realizar el login exitoso
+                                <span class="error-color">Se debe ingresar a la pagina ToolsQA y realizar el login exitoso
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -209,29 +212,50 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">No such element exception: no such element: Unable to locate element: {'method':'xpath','selector':'//h5[.='Book Store Application']'}</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.NoSuchElementException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>tasks.pantallaPrincipalTask.performAs(pantallaPrincipalTask.java:19)<br />stepDefinitions.MyStepLogin.seleccionarElIconoBookStore(MyStepLogin.java:43)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:59)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource820344870354206538.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="75da95b629b30691fe7cd341d857e7dcdc5a9493bc4b5c168a707ac856af5ff5.png" title=" 1: Se debe ingresar a la pagina ToolsQA y realizar el login exitoso ({usuario=Prueba1, contrasena=Prueba1*, actor=Jason, recorder=login_exitoso, textoEsperadoUser=Books :.})" width="1920"/>
-                <img src="75da95b629b30691fe7cd341d857e7dcdc5a9493bc4b5c168a707ac856af5ff5.png" title=" Given &quot;Jason&quot; Ingresar a la pagina principal toolsQA &quot;login_exitoso&quot;" width="1920"/>
-                <img src="75da95b629b30691fe7cd341d857e7dcdc5a9493bc4b5c168a707ac856af5ff5.png" title=" Jason opens the Home page" width="1920"/>
-                <img src="75da95b629b30691fe7cd341d857e7dcdc5a9493bc4b5c168a707ac856af5ff5.png" title=" Given &quot;Jason&quot; Ingresar a la pagina principal toolsQA &quot;login_exitoso&quot; (completed)" width="1920"/>
-                <img src="ce47a6507de7d6c0a3682f8be5501c080e620585efc5f1d36e4e4e544e1b1264.png" title=" And Seleccionar el icono Book Store" width="1920"/>
-                <img src="ce47a6507de7d6c0a3682f8be5501c080e620585efc5f1d36e4e4e544e1b1264.png" title=" Jason pantalla principal task" width="1920"/>
-                <img src="ce47a6507de7d6c0a3682f8be5501c080e620585efc5f1d36e4e4e544e1b1264.png" title=" Jason clicks on Link boton book store" width="1920"/>
-                <img src="ce47a6507de7d6c0a3682f8be5501c080e620585efc5f1d36e4e4e544e1b1264.png" title=" Jason pantalla principal task (completed)" width="1920"/>
-                <img src="ce47a6507de7d6c0a3682f8be5501c080e620585efc5f1d36e4e4e544e1b1264.png" title=" And Seleccionar el icono Book Store (completed)" width="1920"/>
-                <img src="21cfb27523368ee3d418a3142ce30b05911130da567d48cbe5d3f6894aef3ef7.png" title=" And Hacer click sobre Login ingresar usuario &quot;Prueba1&quot; y contrasena &quot;Prueba1*&quot;" width="1920"/>
-                <img src="21cfb27523368ee3d418a3142ce30b05911130da567d48cbe5d3f6894aef3ef7.png" title=" Jason pantalla book store task" width="1920"/>
-                <img src="21cfb27523368ee3d418a3142ce30b05911130da567d48cbe5d3f6894aef3ef7.png" title=" Jason clicks on Hipervinculo login" width="1920"/>
-                <img src="7874114a58ee0a01308839e67d934af25fea14ed8c3d10154ccd4a02e006920f.png" title=" Jason enters 'Prueba1' into Entrada de texto usuario" width="1920"/>
-                <img src="ebe223886cc473a67df21196e3609f533fc3d87792f1e2fc15ff188363797cc9.png" title=" Jason enters 'Prueba1*' into Entrada de texto contrase&ntilde;a" width="1920"/>
-                <img src="77ddab8de4262b5261bff104416554f23cf509bf618efade6f061153b172a425.png" title=" Jason clicks on Boton login" width="1920"/>
-                <img src="77ddab8de4262b5261bff104416554f23cf509bf618efade6f061153b172a425.png" title=" Jason pantalla book store task (completed)" width="1920"/>
-                <img src="e8dd188bb521c00bbdf021e1f5f7ba7df2c5dfc17e9a4268edaa341fad784d20.png" title=" And Hacer click sobre Login ingresar usuario &quot;Prueba1&quot; y contrasena &quot;Prueba1*&quot; (completed)" width="1920"/>
-                <img src="e8dd188bb521c00bbdf021e1f5f7ba7df2c5dfc17e9a4268edaa341fad784d20.png" title=" Then Validar que ingreso a la pagina principal &quot;Books :.&quot;" width="1920"/>
-                <img src="e8dd188bb521c00bbdf021e1f5f7ba7df2c5dfc17e9a4268edaa341fad784d20.png" title=" Then Validar el label UserName should be not an empty collection" width="1920"/>
-                <img src="e8dd188bb521c00bbdf021e1f5f7ba7df2c5dfc17e9a4268edaa341fad784d20.png" title=" Then Validar que ingreso a la pagina principal &quot;Books :.&quot; (completed)" width="1920"/>
-                <img src="e8dd188bb521c00bbdf021e1f5f7ba7df2c5dfc17e9a4268edaa341fad784d20.png" title=" 1: Se debe ingresar a la pagina ToolsQA y realizar el login exitoso ({usuario=Prueba1, contrasena=Prueba1*, actor=Jason, recorder=login_exitoso, textoEsperadoUser=Books :.}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+                <img src="6b0f097727bc064dd11eed52ebd886c84930ebfd590a02e11fd9f0de741c4cb6.png" title=" 1: Se debe ingresar a la pagina ToolsQA y realizar el login exitoso ({usuario=Prueba1, contrasena=Prueba1*, actor=Jason, recorder=login_exitoso, textoEsperadoUser=Books :.})" width="1920"/>
+                <img src="6b0f097727bc064dd11eed52ebd886c84930ebfd590a02e11fd9f0de741c4cb6.png" title=" Given &quot;Jason&quot; Ingresar a la pagina principal toolsQA &quot;login_exitoso&quot;" width="1920"/>
+                <img src="6b0f097727bc064dd11eed52ebd886c84930ebfd590a02e11fd9f0de741c4cb6.png" title=" Jason opens the Home page" width="1920"/>
+                <img src="6b0f097727bc064dd11eed52ebd886c84930ebfd590a02e11fd9f0de741c4cb6.png" title=" Given &quot;Jason&quot; Ingresar a la pagina principal toolsQA &quot;login_exitoso&quot; (completed)" width="1920"/>
+                <img src="a6452f97c2fc87fd48fb0c50904c2963d101142bfb875c3d13a399847a7843b4.png" title=" And Seleccionar el icono Book Store" width="1920"/>
+                <img src="a6452f97c2fc87fd48fb0c50904c2963d101142bfb875c3d13a399847a7843b4.png" title=" Jason pantalla principal task: <span class='error-color'>ERROR</span>" width="1920"/>
             </div>
         </div>
 

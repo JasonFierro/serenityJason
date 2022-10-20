@@ -21,7 +21,7 @@
 //import org.openqa.selenium.WebDriver;
 //import tasks.pantallaBookStoreTask;
 //import userInterfaces.bookStorePage;
-//import userInterfaces.homePage;
+//import userInterfaces.home.homePage;
 //
 //
 //import static org.assertj.core.api.Assertions.assertThat;

@@ -12,7 +12,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import questions.pantallaPrincipalQtns;
 import tasks.pantallaBookStoreTask;
 import tasks.pantallaPrincipalTask;
-import userInterfaces.homePage;
+import userInterfaces.home.homePage;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;

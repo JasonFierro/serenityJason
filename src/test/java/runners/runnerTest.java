@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(publish = true,
         features = {"src/test/resources/features/"},
         glue = {"stepDefinitions"},
-        //tags = "",
+        tags = "@Login",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 public class runnerTest {

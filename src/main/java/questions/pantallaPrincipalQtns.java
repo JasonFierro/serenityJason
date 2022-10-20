@@ -1,14 +1,10 @@
 package questions;
 
-import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.questions.Attribute;
 import net.serenitybdd.screenplay.questions.Text;
-import net.serenitybdd.screenplay.questions.TextContent;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 import userInterfaces.bookStorePage;
-
-import static org.hamcrest.Matchers.hasItems;
 
 public class pantallaPrincipalQtns{
 //    public static pantallaPrincipalQtns textEquals(){
@@ -19,11 +15,15 @@ public class pantallaPrincipalQtns{
 //        return BrowseTheWeb.as(actor).find(bookStorePage.LABEL_USER).getText();
 //    }
 
+    @NotNull
+    @Contract(pure = true)
     public static Question validateTextUsername(){
         //return actor -> Text.of(bookStorePage.LABEL_PASSWORD).viewedBy(actor).asInteger();
         return actor -> actor.asksFor(Text.of(bookStorePage.LABEL_USER).asString());
     }
 
+    @NotNull
+    @Contract(pure = true)
     protected static Question validateTextPassword() {
         return actor -> actor.asksFor(Text.of(bookStorePage.LABEL_PASSWORD).asString());
     }

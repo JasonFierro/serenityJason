@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
-import static userInterfaces.homePage.*;
+import static userInterfaces.home.homePage.*;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
@@ -16,8 +16,8 @@ public class pantallaPrincipalTask implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Scroll.to(BTN_BOOK_STORE),
-                Click.on(BTN_BOOK_STORE));
+        actor.attemptsTo(Scroll.to(BTN_INGRESAR),
+                Click.on(BTN_INGRESAR));
     }
 
 }
