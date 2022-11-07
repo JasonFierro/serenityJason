@@ -59,6 +59,7 @@ public class MyStepLogin extends pantallaPrincipalQtns{
     public void validarQueIngresoALaPaginaPrincipal( String textoEsperadoUser) {
         theActorInTheSpotlight().should(
                 seeThat("Validar el label UserName", validateTextUsername(),is(not(empty()))));
+                seeThat("Validar el label UserName", validateTextUsername(),not(contains()));
     }
 
     @Then("Validar que ingreso a la pagina principal {string} {string}")

@@ -13,12 +13,18 @@ import userInterfaces.home.homePage;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.*;
 import static questions.cuenta.validarMiCuentaQtns.*;
-import static tasks.flujos.home.agregarProductoDos.*;
+import static questions.pagos.pagosQstn.validateTextPagar;
+import static tasks.flujos.checkout.compraDirectaTask.finalizarCompra;
+import static tasks.flujos.checkout.datosCheckoutTask.datosCheckout;
+import static tasks.flujos.home.agregarProductoDos.agregarProductoDos;
 import static tasks.flujos.home.agregarProductoUno.*;
 import static tasks.flujos.home.logoPrixzTask.*;
 import static tasks.flujos.ingresar.accederLoginTask.ingresarLogin;
+import static tasks.flujos.pagos.pagosTask.pagos;
+import static tasks.flujos.pagos.seleccionarCuotasTask.cuotas;
+import static tasks.flujos.pagos.tarjetaCredDebTask.tarjetaCredDeb;
 
 public class compraLoginTarjeta {
 
@@ -70,30 +76,40 @@ public class compraLoginTarjeta {
     @And("Hace click en seguir comprando agrega otro producto y hace click en finalizar compra")
     public void haceClickEnSeguirComprandoAgregaOtroProductoYHaceClickEnFinalizarCompra() {
         theActorInTheSpotlight().wasAbleTo(agregarProductoDos());
+        //theActorInTheSpotlight().wasAbleTo(finalizarCompra());
     }
 
     @And("Envia todos los campos obligatorios {string} {string} {string} {string} {string} {string} {string} {string} {string} {string} y da click en continuar compra")
-    public void enviaTodosLosCamposObligatoriosYDaClickEnContinuarCompra(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, String arg7, String arg8, String arg9) {
+    public void enviaTodosLosCamposObligatoriosYDaClickEnContinuarCompra(String usuario,String CkNombre, String CkApellido,
+                                                                         String CkDireccion, String CkExterior, String CkInterior, String CkPostal, String CkEstado, String CkCiudad, String CkTelefono) {
+        theActorInTheSpotlight().wasAbleTo(
+                datosCheckout(usuario, CkNombre, CkApellido, CkDireccion, CkExterior, CkInterior, CkPostal, CkEstado, CkCiudad, CkTelefono));
     }
 
     @And("Selecciona nueva tarjeta debito o credito")
     public void seleccionaNuevaTarjetaDebitoOCredito() {
-        theActorInTheSpotlight().wasAbleTo();
+        theActorInTheSpotlight().wasAbleTo(tarjetaCredDeb());
     }
 
     @And("Ingresa el N tarjeta {string} vencimiento {string} titular {string} CVV {string} click en continuar")
-    public void ingresaElNTarjetaVencimientoTitularCVVClickEnContinuar(String arg0, String arg1, String arg2, String arg3) {
-        theActorInTheSpotlight().wasAbleTo();
+    public void ingresaElNTarjetaVencimientoTitularCVVClickEnContinuar(String Ntarjeta, String Nvencimiento, String Ntitular, String cvv) {
+        theActorInTheSpotlight().wasAbleTo(pagos(Ntarjeta,Nvencimiento,Ntitular,cvv));
     }
 
     @And("Selecciona la cuota {string}")
-    public void seleccionaLaCuota(String arg0) {
-        theActorInTheSpotlight().wasAbleTo();
+    public void seleccionaLaCuota(String Ncuotas) {
+        theActorInTheSpotlight().wasAbleTo(cuotas(Ncuotas)
+        );
     }
 
+
     @Then("Valida el boton de pago")
-    public void validaElBotonDePago() {
-        theActorInTheSpotlight().wasAbleTo();
+    public void validaElBotonDePago() throws InterruptedException {
+        theActorInTheSpotlight().should(
+                seeThat("Validar el boton pagar al final del flujo",validateTextPagar(),is(not(empty())))
+        );
+        System.out.println("*********"+validateTextPagar().answeredBy(theActorInTheSpotlight()));//Responda el actor en escena el valor en string
+        Thread.sleep(3000);
     }
 
 }
