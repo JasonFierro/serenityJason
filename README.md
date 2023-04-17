@@ -22,3 +22,6 @@ prueba mvn -Dcucumber.options=“src/prueba/recursos/pruebasfuncionales/End2End_
 mvn test -Dcucumber.options=“Algo” -Dcucumber.options=”Algo” -Dcucumber.options=“Algo”
 Ej: mvn test -Dcucumber.options=“src/test/resources/funcionalTests/End2End_Tests.feature” -Dcucumber.options=“- -tags @Smoke ”
 prueba mvn -Dcucumber.options=“src/test/resources/funcionalTests/End2End_Tests.feature” -Dcucumber.filter.tags=“@Smoke”
+
+
+mvn verify -Dcucumber.filter.tags="@smoke and @dev"

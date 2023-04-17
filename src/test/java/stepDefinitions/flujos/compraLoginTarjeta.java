@@ -7,6 +7,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import models.ScreenRecorder.MyScreenRecorder;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import userInterfaces.home.homePage;
@@ -44,6 +46,7 @@ public class compraLoginTarjeta {
     public void ingresaAlHomePagePrixz(String actor, String recorder) throws Exception {
         MyScreenRecorder.startRecording(recorder);
         theActorCalled(actor).wasAbleTo(Open.browserOn(home));
+        BrowseTheWeb.as(Actor.named(actor)).getAlert().accept();
     }
 
     @And("Hace click sobre el boton login ingresa usuario {string} ingresa contraseña {string} y hace click sobre acceder")

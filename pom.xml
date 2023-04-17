@@ -18,8 +18,6 @@
         <!--        <cucumber.version>4.2.0</cucumber.version>-->
         <selenium.version>4.4.0</selenium.version>
         <serenity.version>3.3.4</serenity.version>
-        <serenity.cucumber.version>1.0.14</serenity.cucumber.version>
-        <cucumber.version>4.2.0</cucumber.version>
         <encoding>UTF-8</encoding>
         <parallel.tests>1</parallel.tests>
         <maven.compiler.source>1.8</maven.compiler.source>
