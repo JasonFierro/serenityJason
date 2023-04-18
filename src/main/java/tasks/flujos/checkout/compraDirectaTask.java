@@ -1,6 +1,5 @@
 package tasks.flujos.checkout;
 
-import javafx.scene.control.Alert;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;

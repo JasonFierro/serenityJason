@@ -46,7 +46,7 @@ public class compraLoginTarjeta {
     public void ingresaAlHomePagePrixz(String actor, String recorder) throws Exception {
         MyScreenRecorder.startRecording(recorder);
         theActorCalled(actor).wasAbleTo(Open.browserOn(home));
-        BrowseTheWeb.as(Actor.named(actor)).getAlert().accept();
+//        BrowseTheWeb.as(Actor.named(actor)).getAlert().accept();
     }
 
     @And("Hace click sobre el boton login ingresa usuario {string} ingresa contraseña {string} y hace click sobre acceder")

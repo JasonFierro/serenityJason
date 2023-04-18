@@ -3,6 +3,7 @@ package userInterfaces.home;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
+import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.By;
 
 @DefaultUrl("page:webdriver.base.url")

@@ -1,0 +1,4 @@
+runners/runnerTest.class
+stepDefinitions/flujos/compraLoginTarjeta.class
+stepDefinitions/flujos/homeDefinition.class
+stepDefinitions/MyStepLogin.class

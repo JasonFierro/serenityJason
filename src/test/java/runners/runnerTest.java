@@ -3,6 +3,7 @@ package runners;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
+import net.thucydides.core.annotations.Managed;
 import org.junit.runner.RunWith;
 
 //@RunWith(CucumberWithSerenity.class)
@@ -12,7 +13,7 @@ import org.junit.runner.RunWith;
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         glue = {"stepDefinitions"},
 //        tags = "@pagoSinLoginTarjeta or @pagoLoginTarjeta"
-        tags = "@home"
+        tags = "@pagoLoginTarjeta"
 )
 public class runnerTest {
 }
